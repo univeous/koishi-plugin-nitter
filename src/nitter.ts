@@ -41,7 +41,7 @@ export interface Config {
 
 export const Config: Schema<Config> = Schema.object({
   endpoint: Schema.string()
-    .description("nitter 实例终结点。")
+    .description("nitter 实例终结点。请确保该实例启用了 rss 。")
     .default("https://nitter.cz"),
   interval: Schema.number().description("请求之间的间隔 (秒)。").default(10),
   image: Schema.boolean()
