@@ -1,21 +1,42 @@
 {
   "name": "@univeous/koishi-plugin-nitter",
   "description": "nitter plugin for koishi",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/univeous/koishi-plugin-nitter.git"
+  },
+  "contributors": [
+    "Univeous <univeous@gmail.com>"
+  ],
   "typings": "lib/index.d.ts",
   "files": [
-    "lib",
-    "dist"
+    "lib"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
+  "koishi": {
+    "service": {
+      "required": [
+        "database"
+      ],
+      "optional": [
+        "puppeteer"
+      ]
+    }
+  },
   "peerDependencies": {
     "koishi": "^4.15.7"
+  },
+  "devDependencies": {
+    "koishi-plugin-puppeteer": "^3.5.0"
+  },
+  "dependencies": {
+    "rss-to-json": "^2.1.1"
   }
 }
